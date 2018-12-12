@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  app:
+    image: app
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+      args:
+        - NODE_ENV=development
+    env_file:
+      - docker/.env
+    volumes:
+      - .:/opt/app:delegated
+      - /opt/app/node_modules
+    command: /opt/app/tools/entrypoint.sh
+    ports:
+      - 9229:9229
+    networks:
+      - app_net
+
+networks:
+  app_net:
+    driver: bridge
+    name: app_network

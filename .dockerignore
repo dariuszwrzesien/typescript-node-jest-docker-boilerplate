@@ -1,0 +1,12 @@
+.git
+.idea
+.vscode
+docker
+node_modules
+*.test.js
+.dockerignore
+.gitlab-ci.yml
+docker-compose.yml
+Makefile
+package-lock.json
+README.md

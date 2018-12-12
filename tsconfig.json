@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "types": ["node", "jest"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "alwaysStrict": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
