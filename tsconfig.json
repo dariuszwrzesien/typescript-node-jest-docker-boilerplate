@@ -4,6 +4,7 @@
     "types": ["node", "jest"],
     "module": "commonjs",
     "moduleResolution": "node",
+    "noImplicitAny": false,
     "strict": true,
     "declaration": true,
     "sourceMap": true,
@@ -11,9 +12,11 @@
     "alwaysStrict": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
