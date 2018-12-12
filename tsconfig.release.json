@@ -1,8 +1,9 @@
 {
   "extends": "./tsconfig.json",
+  "compileOnSave": true,
   "compilerOptions": {
+    "removeComments": true,
     "rootDir": ".",
-    "outDir": "build/dist",
-    "removeComments": true
+    "outDir": "build/dist"
   }
 }
