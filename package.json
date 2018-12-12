@@ -8,10 +8,10 @@
   "scripts": {
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
-    "nodemon-watch": "nodemon build/dist/src/main.js --inspect=0.0.0.0:9229",
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "node:watch": "nodemon build/dist/src/main.js --inspect=0.0.0.0:9229"
   },
   "repository": {
     "type": "git",

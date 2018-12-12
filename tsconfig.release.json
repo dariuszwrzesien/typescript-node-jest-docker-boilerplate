@@ -4,8 +4,5 @@
     "rootDir": ".",
     "outDir": "build/dist",
     "removeComments": true
-  },
-  "include": [
-    "src/**/*"
-  ]
+  }
 }
