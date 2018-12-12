@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "es2017",
     "types": ["node", "jest"],
+    "rootDir": ".",
+    "outDir": "build/dist",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": false,

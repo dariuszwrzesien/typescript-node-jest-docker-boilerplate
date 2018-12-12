@@ -1,23 +1,26 @@
 import { Config } from './shared/config';
 
+// function watcher() {
+//     const production = Config.ENVIRONMENT === 'production';
+//     if(!production) {
+//         var chokidar = require('chokidar');
+//         var watcher = chokidar.watch('./build/dist');
+//         watcher.on('ready', function() {
+//             watcher.on('all', function() {
+//                 console.log("Clearing build/dist/ module cache from server");
+//                 Object.keys(require.cache).forEach(function(id) {
+//                     console.log(123123);
+//                     // if (/[\/\\]build[\/\\]/.test(id)) delete require.cache[id]
+//                 })
+//             })
+//         })
+//     }
+// }
+
 async function main() {
-
-    // const production = process.env.ENVIRONMENT === 'production';
-    // if(!production) {
-    //     const chokidar = require('chokidar');
-    //     const watcher = chokidar.watch('./build/dist');
-    //     watcher.on('ready', () => {
-    //         watcher.on('all', () => {
-    //             console.info("Clearing build/dist/ module cache from server");
-    //             Object.keys(require.cache).forEach(function(id) {
-    //                 if (/[\/\\]build[\/\\]dist[\/\\]/.test(id)) delete require.cache[id]
-    //             })
-    //         })
-    //     })
-    // }
-
-    console.log('123asd');
+    // watcher();
+    console.log(Config.ENVIRONMENT);
     console.log(Config.TEST);
 }
 
-main().then(() => console.log('123')).catch(err => {console.log(err)});
+main().catch(err => {console.log(err)});
