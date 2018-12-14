@@ -1,5 +1,7 @@
 # Typescript-Node-Jest-Docker Boilerplate
 
+[![](https://img.shields.io/github/downloads/dariuszwrzesien/typescript-node-jest-docker-boilerplate/total.svg)](https://github.com/dariuszwrzesien/typescript-node-jest-docker-boilerplate)
+
 ## Docker
 ### Uruchomienie środowiska
 1. Utworzyć plik `docker/.env` zawierający zmienne środowiskowe potrzebne do uruchomienia (przekopiowując plik 
