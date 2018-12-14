@@ -2,17 +2,18 @@
 
 [![](https://img.shields.io/github/downloads/dariuszwrzesien/typescript-node-jest-docker-boilerplate/total.svg)](https://github.com/dariuszwrzesien/typescript-node-jest-docker-boilerplate)
 
-## Docker
-### Uruchomienie środowiska
-1. Utworzyć plik `docker/.env` zawierający zmienne środowiskowe potrzebne do uruchomienia (przekopiowując plik 
-.env.template i uzupełniając danymi)
-2. Utworzyć sieć dokerową: `docker network create smartflow_network`
-3. W katalogu głównym wydać polecenie `docker-compose up`.
-### Kompilacja
-1. Aby po zapisie (onChange) pliki TS automatycznie re-kompilowały sie do JS, z posiomu IDE ustaw recompile on change:
-    - Dla Webstorma:
-    `File -> Settings -> Languages & Frmaeworks -> Typescript -> Recompile on changes`
-    - Dla VSC lub Atom:
-    Za ustawienie odpowiada zmienna ustawiona w tsconfig.json/tsconfig.release.json `"compileOnSave": true`
+## Docker start
+1. Create file `docker/.env` from `.env.template`
+2. Create docker network: `docker network create app_network`
+3. In root directory type command: `docker-compose up`
 
-2. Upewnij się że katalog build/dist ma uprawnienia do zapisu.
+That's all, now your instance is working :)
+
+### Compilation
+1. In order to re-compile after code change:
+    - <strong>Webstorm / IntelliJ:</strong>
+     `File -> Settings -> Languages & Frmaeworks -> Typescript -> Recompile on changes`
+    - <strong>VSC</strong> or <strong>Atom:</strong>
+    There is already set variable `"compileOnSave": true` in tsconfig.json/tsconfig.release.json which is responsible for handling `onSave` signal from the IDE.
+    
+2. IMPORTANT! Make sure you have read/write privileges to build/dist directory.
